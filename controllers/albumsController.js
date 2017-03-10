@@ -1,5 +1,5 @@
 // controllers/albumsController.js
-
+var db= require('../models');
 var albums = [];
 albums.push({
               _id: 132,
