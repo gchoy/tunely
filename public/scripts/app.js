@@ -41,6 +41,9 @@ $(document).ready(function() {
   console.log('app.js loaded!');
 });
 
+function renderAlbum(album){
+  console.log('rendering album:', album);
+}
 
 
 
