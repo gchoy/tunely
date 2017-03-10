@@ -43,15 +43,14 @@ $(document).ready(function() {
     renderAlbum(element);
     console.log("Albums Rendered");
   });
-});
 
 // this function takes a single album and renders it to the page
-function renderAlbum(album){
+  function renderAlbum(album){
   console.log('rendering album:', album);
   var albumHtml = (`
 
           <!-- one album -->
-          <div class="row album" data-album-id='${album.id}'>
+          <div class="row album" data-album-id=${album.id}>
 
             <div class="col-md-10 col-md-offset-1">
               <div class="panel panel-default">
@@ -61,7 +60,7 @@ function renderAlbum(album){
                 <!-- begin album internal row -->
                   <div class='row'>
                     <div class="col-md-3 col-xs-12 thumbnail album-art">
-                      <img src='${album.image}' alt="album image">
+                      <img src="images/800x800.png" alt="album image">
                     </div>
 
                     <div class="col-md-9 col-xs-12">
@@ -73,7 +72,7 @@ function renderAlbum(album){
 
                         <li class="list-group-item">
                           <h4 class='inline-header'>Artist Name:</h4>
-                          <span class='artist-name'>${album.name}</span>
+                          <span class='artist-name'>${album.artistName}</span>
                         </li>
 
                         <li class="list-group-item">
@@ -98,3 +97,4 @@ function renderAlbum(album){
     `)
     $('#albums').prepend(albumHtml);
 };
+});

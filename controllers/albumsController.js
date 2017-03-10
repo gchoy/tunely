@@ -33,6 +33,9 @@ albums.push({
 // GET /api/albums
 function index(req, res) {
   // send back all albums as JSON
+  db.Album.find({},function(err, allAlbums){
+    res.json(allAlbums);
+  });
 }
 
 // POST /api/albums
