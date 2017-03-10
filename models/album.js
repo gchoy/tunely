@@ -5,10 +5,10 @@ var Schema = mongoose.Schema;
 
 //Defining a schema for album
 var AlbumSchema = new Schema({
-  artist: String,
-  tracks: String,
-  image: String,
-  releaseDate: String
+  artistName: String,
+  name: String,
+  releaseDate: String,
+  genres: [String]
 });
 
 
