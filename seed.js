@@ -33,13 +33,13 @@ var albums =[];
 
 
 
-db.Album.remove({}, function(err, albums){
+db.Album.remove({}, function(err, albumList){
   // code in here runs after all albums are removed
-  db.Album.create(albums, function(err, albums){
+  db.Album.create(albums, function(err, albumList){
     // code in here runs after all albums are created
     if (err) { return console.log('ERROR', err); }
-    console.log("all albums:", albums);
-    console.log("created", albums.length, "albums");
+    console.log("all albums:", albumList);
+    console.log("created", albumList.length, "albums");
     process.exit();
   });
 });
